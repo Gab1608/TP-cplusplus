@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UtilisationQtClass</class>
+ <widget class="QMainWindow" name="UtilisationQtClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTextBrowser" name="textBrowser">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>40</y>
+      <width>551</width>
+      <height>491</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <widget class="QMenu" name="menuAjouter_V_hicule">
+     <property name="title">
+      <string>Ajouter Véhicule</string>
+     </property>
+     <addaction name="actionPromenade"/>
+     <addaction name="actionCamion"/>
+    </widget>
+    <addaction name="actionQuitter"/>
+    <addaction name="menuAjouter_V_hicule"/>
+    <addaction name="separator"/>
+    <addaction name="actionSupprimer_V_hicule"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionQuitter">
+   <property name="text">
+    <string>Quitter</string>
+   </property>
+  </action>
+  <action name="actionPromenade">
+   <property name="text">
+    <string>Promenade</string>
+   </property>
+  </action>
+  <action name="actionCamion">
+   <property name="text">
+    <string>Camion</string>
+   </property>
+  </action>
+  <action name="actionSupprimer_V_hicule">
+   <property name="text">
+    <string>Supprimer Véhicule</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionQuitter</sender>
+   <signal>triggered()</signal>
+   <receiver>UtilisationQtClass</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionPromenade</sender>
+   <signal>triggered()</signal>
+   <receiver>UtilisationQtClass</receiver>
+   <slot>dialogAjouterPromenade()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCamion</sender>
+   <signal>triggered()</signal>
+   <receiver>UtilisationQtClass</receiver>
+   <slot>dialogAjouterCamion()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSupprimer_V_hicule</sender>
+   <signal>triggered()</signal>
+   <receiver>UtilisationQtClass</receiver>
+   <slot>dialogSupprimerVehicule()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>dialogAjouterPromenade()</slot>
+  <slot>dialogAjouterCamion()</slot>
+  <slot>dialogSupprimerVehicule()</slot>
+ </slots>
+</ui>
